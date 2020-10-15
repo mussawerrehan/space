@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+
+<div>
+    <p>
+        Articles are words that define a noun as specific or unspecific. Consider the following examples:
+    </p>
+    <p>
+        After the long day, the cup of tea tasted particularly good.
+        By using the article the, we’ve shown that it was one specific day that was long and one specific cup of tea that tasted good.
+    </p>
+    <p>
+        After a long day, a cup of tea tastes particularly good.
+        By using the article a, we’ve created a general statement, implying that any cup of tea would taste good after any long day.
+    </p>
+</div>
+    <h2>Comments ({{ comments|length }})</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
